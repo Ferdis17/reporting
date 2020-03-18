@@ -7,7 +7,6 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.Objects;
 
-@AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
 @ToString
@@ -24,6 +23,10 @@ public class Transaction {
     @Column(name = "trans_type")
     private String transactionType;
     private BigDecimal amount;
+
+    public Transaction(Date date, String investment, String checkpaid, BigDecimal amount) {
+    }
+
 //public Transaction(){}
 //
 //    public Transaction(Date date, String description, String transactionType, BigDecimal amount) {
