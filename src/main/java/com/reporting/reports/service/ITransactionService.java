@@ -1,12 +1,11 @@
 package com.reporting.reports.service;
 
-import com.reporting.reports.model.Transaction;
 import net.sf.jasperreports.engine.JRException;
 
 import java.io.FileNotFoundException;
-import java.util.List;
+import java.io.IOException;
 
 public interface ITransactionService {
 
-    public String export(String reportFormat) throws FileNotFoundException, JRException;
+    public String export(String reportFormat) throws FileNotFoundException, JRException, IOException;
 }

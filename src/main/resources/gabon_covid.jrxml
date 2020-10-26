@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.0.final using JasperReports Library version 6.12.1-ac0eebdb29e4c0985457bab279a6db744d661530  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Gabon_Covid_19" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5021b7ab-4d36-456c-9e0a-66c9724f9ebb">
+    <parameter name="labId" class="java.lang.String"/>
+    <parameter name="patientId" class="java.lang.String"/>
+    <parameter name="names" class="java.lang.String"/>
+    <parameter name="dob" class="java.lang.String"/>
+    <parameter name="age" class="java.lang.String"/>
+    <parameter name="sex" class="java.lang.String"/>
+    <parameter name="caseType" class="java.lang.String"/>
+    <parameter name="demandeur" class="java.lang.String"/>
+    <parameter name="testingSite" class="java.lang.String"/>
+    <parameter name="causeOfTesting" class="java.lang.String"/>
+    <parameter name="diagnostic" class="java.lang.String"/>
+    <parameter name="suivi" class="java.lang.String"/>
+    <parameter name="testingDate" class="java.lang.String"/>
+    <parameter name="labrcvDate" class="java.lang.String"/>
+    <parameter name="technique" class="java.lang.String"/>
+    <parameter name="kit" class="java.lang.String"/>
+    <parameter name="equipment" class="java.lang.String"/>
+    <parameter name="prelevementType" class="java.lang.String"/>
+    <parameter name="geneSearched1" class="java.lang.String"/>
+    <parameter name="geneSearched2" class="java.lang.String"/>
+    <parameter name="valueOfCT1" class="java.lang.String"/>
+    <parameter name="valueOfCT2" class="java.lang.String"/>
+    <parameter name="analysisResult" class="java.lang.String"/>
+    <parameter name="date" class="java.lang.String"/>
+    <parameter name="conclusion" class="java.lang.String"/>
+    <parameter name="doneAt" class="java.lang.String"/>
+    <parameter name="date1" class="java.lang.String"/>
+    <parameter name="responsable" class="java.lang.String"/>
+    <parameter name="analysisDate" class="java.lang.String"/>
+    <parameter name="logo" class="java.lang.String"/>
+       <title>
+        <band height="108" splitType="Stretch">
+            <image>
+                <reportElement x="446" y="10" width="74" height="40" uuid="acf8b8ec-8f2f-484f-9988-7fc9ff271e6c"/>
+                <imageExpression><![CDATA[$P{logo}]]></imageExpression>
+            </image>
+            <staticText>
+                <reportElement x="117" y="86" width="330" height="22" uuid="89073be4-c5be-4108-87ff-d8e6c5911469"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <text><![CDATA[RESULTAT DU TEST DE DIAGNOSTIC COVID-19]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="12" y="7" width="194" height="13" uuid="c0d70d43-fa63-4112-8b2c-f147e862b9c6"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <text><![CDATA[PRIMATURE]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="12" y="20" width="195" height="30" uuid="ce491390-00f8-4724-9074-000c3b84aaa1"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="8"/>
+                </textElement>
+                <text><![CDATA[COMITE DE PILOTAGE DU PLAN DE VEILLE ET DE REIPOSTE CONTRE COVID-19]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="13" y="63" width="231" height="17" uuid="e6b9827b-c05f-4ed8-80e9-188a2ddc4c91"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[SOUS-COMMISSION LABORATOIRE ET RECHERCHE]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="12" y="50" width="194" height="13" uuid="102994ab-ff7a-452b-b381-533acfc19c8e"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="8"/>
+                </textElement>
+                <text><![CDATA[CORDINATION TECHNIQUE]]></text>
+            </staticText>
+        </band>
+    </title>
+    <pageFooter>
+        <band height="242" splitType="Stretch">
+            <frame>
+                <reportElement x="0" y="2" width="600" height="180" uuid="4782ab8f-f8e1-43c9-b90a-f4db6cee4c39"/>
+                <staticText>
+                    <reportElement x="11" y="2" width="128" height="21" uuid="65a5322f-467c-4c1c-8d17-58185c16d40b"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <text><![CDATA[ID Registre Laboratoire]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="140" y="2" width="147" height="21" uuid="17de5cf5-3c2c-401e-90f6-78b42986200d"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <textFieldExpression><![CDATA[$P{labId}]]></textFieldExpression>
+                </textField>
+                <staticText>
+                    <reportElement x="11" y="23" width="128" height="26" uuid="d9ae778c-d87e-448e-9b79-f2ec8f1faf6b"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <text><![CDATA[Nom(s) et Prenom:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="140" y="23" width="147" height="26" uuid="e8056168-3038-4cb6-aac4-14b1ecdecfa6"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <textFieldExpression><![CDATA[$P{names}]]></textFieldExpression>
+                </textField>
+                <staticText>
+                    <reportElement x="288" y="0" width="100" height="23" uuid="b338d6b0-f0ad-4314-8d36-af4935543abf"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <text><![CDATA[ID Patient:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="389" y="0" width="176" height="23" uuid="b21de1ea-5042-47cf-a926-6e33bfe5f38e"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <textFieldExpression><![CDATA[$P{patientId}]]></textFieldExpression>
+                </textField>
+                <staticText>
+                    <reportElement x="288" y="23" width="100" height="26" uuid="1b0d08e4-a37f-4524-8121-9c260662255b"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <text><![CDATA[Date de naissance:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="389" y="23" width="176" height="26" uuid="6824fdda-6fb1-43d1-ae4a-6128e5fa19a6"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <textFieldExpression><![CDATA[$P{dob}]]></textFieldExpression>
+                </textField>
+                <staticText>
+                    <reportElement x="11" y="50" width="29" height="30" uuid="3a470613-cafe-4266-8c34-c25285accdca"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <text><![CDATA[Age:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="41" y="50" width="98" height="30" uuid="1fc159ee-5dc7-4c21-8e09-7648460d18d2"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <textFieldExpression><![CDATA[$P{age}]]></textFieldExpression>
+                </textField>
+                <staticText>
+                    <reportElement x="139" y="49" width="51" height="31" uuid="238c7f82-fe1c-450a-b55f-42f5826cdf7b"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <text><![CDATA[Sexe:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="190" y="50" width="97" height="30" uuid="9f7e87f2-c64d-4082-a4e0-30e671666944"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <textFieldExpression><![CDATA[$P{sex}]]></textFieldExpression>
+                </textField>
+                <staticText>
+                    <reportElement x="289" y="50" width="100" height="30" uuid="fa84f307-07bb-413b-9592-9ff1c8866b37"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <text><![CDATA[Type de cas:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="390" y="50" width="175" height="21" uuid="c89092c4-9182-4924-8c5f-784942056478"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <textFieldExpression><![CDATA[$P{caseType}]]></textFieldExpression>
+                </textField>
+                <staticText>
+                    <reportElement x="11" y="80" width="128" height="21" uuid="8916272d-3391-4c0d-a816-fe793c311bc1"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <text><![CDATA[Demandeur:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="140" y="81" width="147" height="21" uuid="d9a97473-7828-4339-acdc-b149a34d0f79"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <textFieldExpression><![CDATA[$P{demandeur}]]></textFieldExpression>
+                </textField>
+                <staticText>
+                    <reportElement x="288" y="80" width="102" height="21" uuid="f57ceef7-6329-4550-b989-f41d1e0650ec"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <text><![CDATA[Site de prelevement:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="398" y="80" width="159" height="21" uuid="9b03dcd2-f0ed-492b-9786-190dddcbbb79"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <textFieldExpression><![CDATA[$P{testingSite}]]></textFieldExpression>
+                </textField>
+                <staticText>
+                    <reportElement x="11" y="102" width="128" height="21" uuid="b6bf0593-2e0e-4102-84f2-896c98ad1fcb"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <text><![CDATA[Motif de l'examen:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="310" y="144" width="175" height="30" uuid="9f084eaa-8d3c-4581-a11a-4f7384ef8985"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <textFieldExpression><![CDATA[$P{causeOfTesting}]]></textFieldExpression>
+                </textField>
+                <staticText>
+                    <reportElement x="140" y="102" width="59" height="21" uuid="28d57cde-82eb-4846-88bf-b81b36b2a2cb"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <text><![CDATA[Diagnostic:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="199" y="102" width="53" height="21" uuid="a540f097-5e16-44d7-9eec-270b10f19a2e"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <textFieldExpression><![CDATA[$P{diagnostic}]]></textFieldExpression>
+                </textField>
+                <staticText>
+                    <reportElement x="252" y="102" width="33" height="21" uuid="a96f6c19-10e9-4c41-9939-1e2124981e80"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <text><![CDATA[Suivi:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="289" y="102" width="268" height="21" uuid="a281af82-dfd4-426d-9038-8599d4923d17"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <textFieldExpression><![CDATA[$P{suivi}]]></textFieldExpression>
+                </textField>
+                <staticText>
+                    <reportElement x="11" y="123" width="128" height="21" uuid="2008d32b-606e-4479-8ba7-206afc280a14"/>
+                    <text><![CDATA[Date de prelevement:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="140" y="123" width="122" height="21" uuid="6eee091e-f570-4996-acb8-776783a0bbd8"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <textFieldExpression><![CDATA[$P{testingDate}]]></textFieldExpression>
+                </textField>
+                <staticText>
+                    <reportElement x="271" y="123" width="171" height="21" uuid="14201771-d623-483a-9347-db73d093cf03"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <text><![CDATA[Date de reception au laboratoire:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="442" y="123" width="130" height="21" uuid="6eee091e-f570-4996-acb8-776783a0bbd8"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <textFieldExpression><![CDATA[$P{labrcvDate}]]></textFieldExpression>
+                </textField>
+            </frame>
+            <textField>
+                <reportElement x="110" y="213" width="109" height="19" uuid="ff510bee-6cee-40cc-b3cc-4a43db7f0334"/>
+                <textFieldExpression><![CDATA[$P{kit}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="110" y="193" width="109" height="20" uuid="c737007d-336a-44a3-a273-4cf1535c283e"/>
+                <textElement textAlignment="Center"/>
+                <text><![CDATA[RT-PCR]]></text>
+            </staticText>
+        </band>
+    </pageFooter>
+    <summary>
+        <band height="802" splitType="Stretch">
+            <staticText>
+                <reportElement x="0" y="-49" width="109" height="20" uuid="0299d433-514f-4e9a-be3a-3f888819395f"/>
+                <text><![CDATA[Methode utilisee:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="-29" width="109" height="20" uuid="8c1b442d-4453-444d-9885-31958ab0391e"/>
+                <text><![CDATA[Kit utilisee:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="-9" width="109" height="20" uuid="2a595fd7-eb2a-45ca-ae1b-f2dab7739300"/>
+                <text><![CDATA[Equipment]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="50" y="11" width="109" height="20" uuid="247d90a4-51f1-4094-8901-b8e433fc30c9"/>
+                <box>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <text><![CDATA[Type de prelevement]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="160" y="11" width="109" height="20" uuid="828c6b06-0096-4346-ae8c-a2f068527ded"/>
+                <box>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <text><![CDATA[Genes recherches]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="270" y="11" width="111" height="20" uuid="9cfc2088-dc5c-4986-a269-b938bfc193dd"/>
+                <box>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <text><![CDATA[Valeur de Ct]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="381" y="11" width="176" height="20" uuid="3931a6c4-90fc-4c8f-b9db-ace33e0c053f"/>
+                <box>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <text><![CDATA[Resultat de l'analyse]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="50" y="31" width="109" height="50" uuid="8dd0d1b3-f7c8-4779-bea2-d1d641f6018f"/>
+                <box>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textFieldExpression><![CDATA[$P{prelevementType}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="159" y="31" width="111" height="25" uuid="7644bc38-f01c-4d13-9381-1cc0fdb91f20"/>
+                <box>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textFieldExpression><![CDATA[$P{geneSearched1}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="159" y="56" width="111" height="25" uuid="6f1a4d1d-1bc6-405b-b599-73cc6ff156b3"/>
+                <box>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textFieldExpression><![CDATA[$P{geneSearched2}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="270" y="31" width="111" height="25" uuid="896701bc-e02a-4605-b62b-75f5a93203dc"/>
+                <box>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textFieldExpression><![CDATA[$P{valueOfCT1}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="270" y="56" width="111" height="25" uuid="fe57925b-a68b-436b-bac2-e0bc894ffca7"/>
+                <box>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textFieldExpression><![CDATA[$P{valueOfCT2}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="381" y="31" width="176" height="50" uuid="9d613f03-9af2-4224-b54c-958f699adbb3"/>
+                <box>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textFieldExpression><![CDATA[$P{analysisResult}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="5" y="101" width="84" height="20" uuid="fa247244-9a2a-49e9-a916-c6639a696b0c"/>
+                <textElement verticalAlignment="Middle"/>
+                <text><![CDATA[Date de l'anayse:]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="90" y="101" width="120" height="20" uuid="a16baed6-ead3-42c2-b45a-ae1891ef3c3a"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$P{analysisDate}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="5" y="121" width="64" height="20" uuid="66ad7356-eded-41d1-a695-174011f56bf8"/>
+                <text><![CDATA[Conclusion:]]></text>
+            </staticText>
+            <frame>
+                <reportElement x="318" y="100" width="239" height="130" uuid="3125ec07-012d-4035-b090-f845c0513da4"/>
+                <staticText>
+                    <reportElement x="7" y="14" width="32" height="17" uuid="23ace292-92a5-4e7b-90ec-d5356a0ca500"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <text><![CDATA[Fait a]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="109" y="14" width="20" height="17" uuid="d543818d-1aed-49bb-9c3e-49489ff2d71b"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <text><![CDATA[,le]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="6" y="34" width="100" height="30" uuid="88776c44-5719-428e-bcbe-d835eb0c282c"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <text><![CDATA[Le Responsable,]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="7" y="98" width="223" height="30" uuid="26c08659-5515-4316-ad14-6492bb13954d"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <text><![CDATA[Nom et prenom du responsable]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="130" y="14" width="100" height="17" uuid="5aee1f2c-0eeb-4f22-9e4a-fe2596375222"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <textFieldExpression><![CDATA[$P{date1}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement x="40" y="14" width="69" height="17" uuid="39f24814-342c-4576-8c94-f6b02968d95a"/>
+                    <textFieldExpression><![CDATA[$P{doneAt}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement x="6" y="67" width="224" height="29" uuid="929e3f83-df56-431b-98c2-c10c566f2569"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <textFieldExpression><![CDATA[$P{responsable}]]></textFieldExpression>
+                </textField>
+            </frame>
+            <staticText>
+                <reportElement x="3" y="240" width="553" height="30" uuid="1ef902d3-41eb-4818-9e89-16b2d45715bc"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="9.2"/>
+                </textElement>
+                <text><![CDATA[NB : devant un resultat negatif, veuillez appeler le 1410 des l'apparition des signes evocateurs du CoVid-19(toux, fievre...)]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="110" y="-10" width="109" height="21" uuid="fcbc8223-9ff4-4cc3-a02d-e32e40ae9f14"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$P{equipment}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="71" y="123" width="181" height="47" uuid="836aa86a-d301-4ef2-be6d-38fef0ee5f80"/>
+                <textFieldExpression><![CDATA[$P{conclusion}]]></textFieldExpression>
+            </textField>
+        </band>
+    </summary>
+</jasperReport>

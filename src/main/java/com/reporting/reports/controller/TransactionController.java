@@ -1,6 +1,5 @@
 package com.reporting.reports.controller;
 
-import com.reporting.reports.model.Transaction;
 import com.reporting.reports.service.ITransactionService;
 import net.sf.jasperreports.engine.JRException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.FileNotFoundException;
-import java.util.List;
+import java.io.IOException;
 
 @RestController
 @RequestMapping("/report")
@@ -20,7 +19,7 @@ public class TransactionController {
     private ITransactionService transactionService;
 
     @GetMapping (value = "/report/{format}")
-    public String generateTransactionReport(@PathVariable String format) throws FileNotFoundException, JRException {
+    public String generateTransactionReport(@PathVariable String format) throws IOException, JRException {
 
        return transactionService.export(format);
     }
